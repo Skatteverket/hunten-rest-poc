@@ -1,0 +1,11 @@
+{
+  "generator-openapi-repo": {
+    "importExistingSpec": true,
+    "importedSpec": "swagger.yaml",
+    "name": "hunten",
+    "repo": "Skatteverket/hunten-rest-poc",
+    "splitSpec": false,
+    "samples": true,
+    "installSwaggerUI": true
+  }
+}
