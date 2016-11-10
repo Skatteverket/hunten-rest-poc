@@ -32,12 +32,6 @@ paths:
           required: true
           type: string
           format: uuid
-        - name: beslutUri
-          in: query
-          description: 'URI för ett beslut'
-          required: false
-          type: string
-          format: uri
       responses:
         '200':
           description: 'Returnerar en lista av begäran'
@@ -356,22 +350,6 @@ definitions:
               maximum: 99999999999
             motivering:
               type: string
-    allOf:
-      - $ref: '#/definitions/Begaran'
-      - properties:
-          Referensnummer:
-            description: 'Skatteverkets referensnummer för begäran'
-            type: string
-            minLength: 0
-            maxLength: 40
-          signatureTimestamp:
-            type: string
-            format: date-time
-          receiptTimestamp:
-            type: string
-            format: date-time
-          mottagenBegaran:
-            $ref: '#/definitions/mottagenBegäran'
   Begaran:
     description: 'Uppgifter om utfört arbete för rot och rut.'
     required:
